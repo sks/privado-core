@@ -56,7 +56,7 @@ object DataFlowReport {
         .getPathFromId(pathId)
         .elements
         .foreach(node => {
-          if (shortPathBuilder.isEmpty) {
+          if (shortPathBuilder.length() == 0) {
             shortPathBuilder.append(node.code)
           } else {
             shortPathBuilder.append(s" -> ${node.code}")
